@@ -1,17 +1,9 @@
 import { useEffect, useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "./assets/vite.svg";
-import heroImg from "./assets/hero.png";
 import "./App.css";
-import Button from "./components/button";
 import Box from "./components/box";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  const addingCount = () => {
-    setCount((count) => count + 1);
-  };
+  const [count] = useState(0);
 
   useEffect(() => {
     console.log("pertama kali di render");

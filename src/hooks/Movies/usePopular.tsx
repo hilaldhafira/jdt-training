@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { getPopularMovies, type Movie } from "../../service/Movies";
 
 export const usePopular = () => {

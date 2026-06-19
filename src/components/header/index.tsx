@@ -1,4 +1,3 @@
-import React from "react";
 import { useToken } from "../../hooks/useToken";
 
 const Header = () => {

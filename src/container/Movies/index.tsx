@@ -44,7 +44,7 @@ const Movies = () => {
           {loading ? (
             <>{/* Spinner here for indicate user system still hitting api */}</>
           ) : (
-            nowPlayingList.map((el, index) => {
+            nowPlayingList.map((el) => {
               return <MoviesComponent movie={el} />;
             })
           )}
