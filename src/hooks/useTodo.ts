@@ -17,15 +17,7 @@ const useTodo = () => {
     ]);
   };
 
-  const removeTodo = () => {
-    console.log("remove");
-  };
-
-  const toggleTodo = () => {
-    console.log("toggle");
-  };
-
-  return { addTodo, removeTodo, toggleTodo, todos };
+  return { addTodo, todos };
 };
 
 export default useTodo;

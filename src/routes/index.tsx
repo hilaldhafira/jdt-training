@@ -35,6 +35,10 @@ export const routes = createBrowserRouter([
             path: "/movie-page",
             element: <Movies />,
           },
+          {
+            path: "/movies-page/:id",
+            element: <Movies />,
+          },
         ],
       },
     ],

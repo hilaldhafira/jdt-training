@@ -1,15 +1,17 @@
-import React, { useEffect, useState } from "react";
-import { ACCESS_TOKEN, BASE_URL } from "../../constant";
-import Box from "../../components/box";
-import { usePopular } from "../../hooks/Movies/usePopular";
+import { useEffect, useState } from "react";
+import { useLocation, useParams } from "react-router";
 import MoviesComponent from "../../components/movies";
-import { useToken } from "@/hooks/useToken";
+import { ACCESS_TOKEN, BASE_URL } from "../../constant";
+import { usePopular } from "../../hooks/Movies/usePopular";
 
 const Movies = () => {
   const [nowPlayingList, setNowPlayingList] = useState([]);
   const [loading, setLoading] = useState<boolean>(true);
   const { popularMovie } = usePopular();
+  const location = useLocation()
+  const param = useParams()
 
+  console.log({location, param});
 
   const getNowPlayingList = (page: number) => {
     fetch(BASE_URL + `movie/now_playing?page=${page}&language=en-US`, {
@@ -33,8 +35,6 @@ const Movies = () => {
     getNowPlayingList(1);
     return () => {};
   }, []);
-
-  console.log({ popularMovie });
 
   return (
     <>

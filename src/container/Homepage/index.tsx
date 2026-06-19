@@ -1,8 +1,6 @@
-import React from "react";
 import Box from "../../components/box";
 import { useNavigate } from "react-router";
 import Button from "../../components/button";
-import { useToken } from "@/hooks/useToken";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -18,8 +16,10 @@ const Index = () => {
     },
   ];
 
-  const movePage = (url: string) => {
-    navigate(url);
+  const movePage = (url: string, state?: string) => {
+    navigate(url, {
+      state: state,
+    });
   };
 
   return (
@@ -35,8 +35,12 @@ const Index = () => {
           content="Move page to CV"
         />
         <Button
-          onClick={() => movePage("movie-page")}
+          onClick={() => movePage("movie-page", "ini dari homepage")}
           content="Move page to Movies"
+        />
+        <Button
+          onClick={() => movePage("movies-page/1222", "ini dari homepage")}
+          content="Move page to Movies with Id"
         />
       </div>
     </>

@@ -1,15 +1,15 @@
-import React from "react";
 import type { Movie } from "../../service/Movies";
 import { Label } from "../label";
 
 interface Props {
   movie: Movie;
+  onClick?: () => {};
 }
 
-const MoviesComponent = ({ movie }: Props) => {
+const MoviesComponent = ({ movie, onClick }: Props) => {
   return (
     <div className="w-full flex items-center cursor-pointer">
-      <div className="flex flex-col">
+      <div onClick={onClick} className="flex flex-col">
         <img
           src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
           alt=""

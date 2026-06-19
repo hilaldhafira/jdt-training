@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import useTodo from "../../hooks/useTodo";
 
 const Todo = () => {
-  const { todos, addTodo, removeTodo, toggleTodo } = useTodo();
+  const { todos, addTodo } = useTodo();
   const [textTodo, setTextTodo] = useState<string>("");
 
   const handleAdd = () => {

@@ -1,5 +1,3 @@
-import React from "react";
-
 interface IButtonComponent {
   content: string;
   desc?: string;
